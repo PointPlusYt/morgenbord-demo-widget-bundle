@@ -3,7 +3,7 @@
     "description": "Dummy Widget demo to help create your own widget for Morgenbord",
     "minimum-stability": "stable",
     "license": "MIT",
-    "type": "library",
+    "type": "symfony-bundle",
     "authors": [
       {
         "name": "Djyp Forest Fortin",
