@@ -1,0 +1,25 @@
+{
+    "name": "morgenbord/demo-widget-bundle",
+    "description": "Dummy Widget demo to help create your own widget for Morgenbord",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+      {
+        "name": "Djyp Forest Fortin",
+        "email": "point@plus.yt"
+      }
+    ],
+    "require": {
+      "php": "^8.0",
+    },
+    "autoload": {
+      "psr-4": {
+        "MorgenBord\\DemoWidgetBundle\\": "src/"
+      }
+    },
+    "require-dev": {
+      "phpunit/phpunit": "*",
+      "squizlabs/php_codesniffer": "^2.9.2"
+    }
+  }
