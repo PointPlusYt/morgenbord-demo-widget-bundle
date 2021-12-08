@@ -2,15 +2,16 @@
 
 namespace MorgenBord\DemoWidgetBundle\EventListener;
 
+use App\Model\Widget;
 use App\Event\RegisterWidgetEvent;
-// use Symfony\Component\HttpFoundation\Response;
-// use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-// use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
+use MorgenBord\DemoWidgetBundle\DemoWidgetBundle;
 
 class RegisterWidgetListener
 {
-    public function onRegisterWidget(RegisterWidgetEvent $event)
+    public function onMorningBordRegisterWidget(RegisterWidgetEvent $event)
     {
-        dd($event);
+        $widget = new Widget();
+        $widget->setName('Demo Widget');
+        $widget->setFqcn(DemoWidgetBundle::class);
     }
 }
