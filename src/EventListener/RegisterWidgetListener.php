@@ -7,7 +7,7 @@ use App\Event\RegisterWidgetEvent;
 // use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 // use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
-class ExceptionListener
+class RegisterWidgetListener
 {
     public function onRegisterWidget(RegisterWidgetEvent $event)
     {
