@@ -9,11 +9,13 @@ use MorgenBord\DemoWidgetBundle\DemoWidgetBundle;
 class RegisterWidgetListener
 {
     private $widgetName = 'Demo Widget';
+    private $widgetShortName = 'demo_widget';
 
     public function onMorningBordRegisterWidget(RegisterWidgetEvent $event)
     {
         $widget = new Widget();
         $widget->setName($this->widgetName);
+        $widget->setShortName($this->widgetShortName);
         $widget->setFqcn(DemoWidgetBundle::class);
         
         $event->addWidget($widget);
