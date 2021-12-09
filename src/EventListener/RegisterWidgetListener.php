@@ -13,5 +13,6 @@ class RegisterWidgetListener
         $widget = new Widget();
         $widget->setName('Demo Widget');
         $widget->setFqcn(DemoWidgetBundle::class);
+        $event->addWidget($widget);
     }
 }
