@@ -8,7 +8,7 @@ use MorgenBord\DemoWidgetBundle\DemoWidgetBundle;
 
 class RegisterWidgetListener
 {
-    private $widgetName = 'Demo Widget'
+    private $widgetName = 'Demo Widget';
 
     public function onMorningBordRegisterWidget(RegisterWidgetEvent $event)
     {
