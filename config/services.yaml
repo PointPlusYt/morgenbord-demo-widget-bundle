@@ -2,4 +2,4 @@ services:
     demo_widget.listener:
         class: MorgenBord\DemoWidgetBundle\EventListener\RegisterWidgetListener
         tags:
-            - { name: kernel.event_listener, event: morningbord.register_widget }
+            - { name: kernel.event_listener, event: morning_bord.register_widget }
