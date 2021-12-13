@@ -2,7 +2,7 @@
 
 namespace MorgenBord\DemoWidgetBundle\EventListener;
 
-use App\Model\Widget;
+use App\Entity\Widget;
 use App\Event\RegisterWidgetEvent;
 use MorgenBord\DemoWidgetBundle\DemoWidgetBundle;
 
