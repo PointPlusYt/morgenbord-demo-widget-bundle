@@ -13,8 +13,9 @@ class DemoWidgetConfiguration implements ConfigurationInterface
 
         // https://symfony.com/doc/current/components/config/definition.html#processing-configuration-values
         // ... add node definitions to the root of the tree
-        $treeBuilder->getRootNode()->children()
-            ->booleanNode('auto_connect')
+        $treeBuilder->getRootNode()
+        ->children()
+            ->variableNode('auto_connect')
                 ->defaultTrue()
             ->end()
         ;
