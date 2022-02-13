@@ -2,24 +2,21 @@
 
 namespace MorgenBord\DemoWidgetBundle;
 
-use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-use Symfony\Component\Config\Definition\ConfigurationInterface;
+use App\Interfaces\ConfigurationFormTypeInterface;
+use App\Widget\ConfigurationForms;
+use Symfony\Component\Form\Form;
 
-class DemoWidgetConfiguration implements ConfigurationInterface
+class DemoWidgetConfiguration implements ConfigurationFormTypeInterface
 {
-    public function getConfigTreeBuilder()
+    private $configurationForm;
+
+    public function __construct(ConfigurationForms $configurationForm)
     {
-        $treeBuilder = new TreeBuilder('widget_parameters');
+        $this->configurationForm = $configurationForm;
+    }
 
-        // https://symfony.com/doc/current/components/config/definition.html#processing-configuration-values
-        // ... add node definitions to the root of the tree
-        $treeBuilder->getRootNode()
-        ->children()
-            ->variableNode('auto_connect')
-                ->defaultTrue()
-            ->end()
-        ;
-
-        return $treeBuilder;
+    public function createConfigForm(): Form
+    {
+        $this->configurationForm->createFormBuilder()->getForm();
     }
 }
