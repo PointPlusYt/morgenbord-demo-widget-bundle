@@ -17,7 +17,6 @@ class DemoWidgetExtension extends Extension implements PrependExtensionInterface
             new FileLocator(__DIR__.'/../../config')
         );
         $loader->load('services.yaml');
-        // $loader->load('routes/demo_widget.yaml');
     }
 
     public function prepend(ContainerBuilder $container)

@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class WidgetApiController extends AbstractController
 {
-    #[Route('/widget/api', name: 'demo_widget_widget_api')]
+    #[Route('/widget/api', name: 'demo_widget_api')]
     public function index(): Response
     {
         return $this->json([
