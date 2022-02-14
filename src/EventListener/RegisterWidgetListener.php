@@ -4,10 +4,8 @@ namespace MorgenBord\DemoWidgetBundle\EventListener;
 
 use App\Entity\Widget;
 use App\Event\RegisterWidgetEvent;
-use App\Service\WidgetParametersService;
 use MorgenBord\DemoWidgetBundle\DemoWidgetBundle;
-use MorgenBord\DemoWidgetBundle\DemoWidgetConfiguration;
-use Symfony\Component\Config\Definition\Processor;
+use MorgenBord\DemoWidgetBundle\DemoWidgetParameters;
 
 class RegisterWidgetListener
 {
@@ -20,13 +18,13 @@ class RegisterWidgetListener
         $widget->setName($this->widgetName);
         $widget->setShortName($this->widgetShortName);
         $widget->setFqcn(DemoWidgetBundle::class);
-        $widget->setParameters($this->getWidgetConfiguration($event));
+        $widget->setParameters($this->getWidgetParameters($event));
         
         $event->addWidget($widget);
     }
 
-    private function getWidgetConfiguration(RegisterWidgetEvent $event)
+    private function getWidgetParameters(RegisterWidgetEvent $event)
     {
-        return $event->widgetParametersService->processConfiguration(DemoWidgetConfiguration::class, []);
+        return $event->parametersForms->processParameters(DemoWidgetParameters::class, []);
     }
 }
