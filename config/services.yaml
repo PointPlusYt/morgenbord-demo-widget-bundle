@@ -1,9 +1,10 @@
 services:
     register_demo_widget.listener:
-        class: MorgenBord\DemoWidgetBundle\EventListener\RegisterDemoWidgetListener
+        class: MorgenBord\DemoWidgetBundle\DemoWidgetParameters
         tags:
             - { name: kernel.event_listener, event: morning_bord.register_widget }
     register_other_widget.listener:
-        class: MorgenBord\DemoWidgetBundle\EventListener\RegisterOtherWidgetListener
+        # class: MorgenBord\DemoWidgetBundle\EventListener\RegisterOtherWidgetListener
+        class: MorgenBord\DemoWidgetBundle\OtherWidgetParameters
         tags:
             - { name: kernel.event_listener, event: morning_bord.register_widget }
